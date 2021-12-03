@@ -1,10 +1,11 @@
 package br.com.controletreinamento.ControleTreinamento.model;
 
+import java.time.LocalTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDate;
 
 @Entity
 public class Treinamento {
@@ -17,9 +18,9 @@ public class Treinamento {
 
     private String descricao;
 
-    private LocalDate inicio;
+    private LocalTime inicio;
 
-    private LocalDate termino;
+    private LocalTime termino;
 
     private Double cargaHoraria;
 
@@ -29,7 +30,7 @@ public class Treinamento {
 
     }
 
-    public Treinamento(String codigo, String descricao, LocalDate inicio, LocalDate termino, Double cargaHoraria, int numeroVagas) {
+    public Treinamento(String codigo, String descricao, LocalTime inicio, LocalTime termino, Double cargaHoraria, int numeroVagas) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.inicio = inicio;
@@ -62,19 +63,19 @@ public class Treinamento {
         this.descricao = descricao;
     }
 
-    public LocalDate getInicio() {
+    public LocalTime getInicio() {
         return inicio;
     }
 
-    public void setInicio(LocalDate inicio) {
+    public void setInicio(LocalTime inicio) {
         this.inicio = inicio;
     }
 
-    public LocalDate getTermino() {
+    public LocalTime getTermino() {
         return termino;
     }
 
-    public void setTermino(LocalDate termino) {
+    public void setTermino(LocalTime termino) {
         this.termino = termino;
     }
 
